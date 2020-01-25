@@ -1,5 +1,4 @@
 %bcond_without	javadoc		# don't build javadoc
-%include	/usr/lib/rpm/macros.java
 %define		srcname	classworlds
 Summary:	Classworlds Classloader Framework
 Name:		java-classworlds
