@@ -41,7 +41,7 @@ Javadoc for %{srcname}.
 %setup -q -n %{srcname}-%{version}
 find -name "*.jar" | xargs rm
 cp -p %{SOURCE1} build.xml
-%patch0 -p0
+%patch -P0 -p0
 
 %build
 export CLASSPATH=target/classes:target/test-classes
