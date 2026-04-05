@@ -1,4 +1,7 @@
 %bcond_without	javadoc		# don't build javadoc
+
+%{?use_default_jdk:%use_default_jdk 8}
+
 %define		srcname	classworlds
 Summary:	Classworlds Classloader Framework
 Name:		java-classworlds
@@ -13,10 +16,10 @@ Source0:	http://execve.pl/PLD/classworlds-%{version}-src.tar.gz
 Source1:	%{name}-build.xml
 Patch0:		%{name}-project_xml.patch
 BuildRequires:	ant >= 0:1.6
-BuildRequires:	jdk
+%buildrequires_jdk
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.556
 Requires(post):	jpackage-utils >= 0:1.7.2
 Requires(postun):	jpackage-utils >= 0:1.7.2
 BuildArch:	noarch
